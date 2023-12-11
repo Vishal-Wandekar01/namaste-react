@@ -60,6 +60,5 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(heading);
 
 //root.render(parent);
-root.render(parent2);
-
+root.render(parent2);// render the parent2 object and put it in to the root which is available in index.html
 
