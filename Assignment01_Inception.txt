@@ -1,0 +1,50 @@
+
+1: What is Emmet?
+   ANS: -Emmet is a web-development toolkit, set of plug-ins for text editors that allows high speed coding and editing in HTML/XML...
+        -Emmet does fulfill what they promise, you can use short expression to generate HTML, markup,CSS.
+
+2: Difference between a library and framework?
+   ANS: 
+        Library: -Provides reusable function for our code  
+                 -Our code controls when and where to call the library
+                 -Library can be added to augment the features of an existing application 
+                 -helps us to reuse the software function
+                 -Intent of la library is to provide reusable software functionality
+
+        Framework: -Provides ready to use tools, standards, templates, and policies for fast application development  
+                   -The framework controls call of libraries for our code 
+                   -To leverage the benefit of framework, a fresh application can be developed following the framework's guideline
+                   -Helps us to develop software application quickly
+                   -Intent of framework is to reduce the complexity of the software development process  
+
+3: What is CDN? Why do we use it?
+   ANS:
+       -A Content Delivery Network(CDN) is a distributed group of servers that caches content close to end user
+       -A CDN allows us to quick transfer of asset needed for loading internet content, including HTML pages, JS files,stylesheets, images and videos
+       -This is the website where the react has been hoisted and we just pull react from there into out project
+       -CDN is a place where React library is hoisted.
+
+4: Why is React known as React?
+   ANS:
+       -React is one of the many libraries and it's completely frontend and specializes in things that the user interact when they are using the website, "And it's called React because it react"      
+
+5: What is cross-origin in the script tag?
+   ANS:
+       -It is a mechanism by which one webpage request to another domain for fetching out the resource like audio, video,script, etc from the third party server without leaking their credential information
+
+6: What is the difference between React and react DOM?
+   ANS:
+       -React library is responsible for creating views ReactDOM is responsible to actually render UI in the browser.
+       -Both are different because introduction of React Native, React can be used to build mobile and web apps, where the ReactDOM is only used for web apps.
+
+7: What is the difference b/w react.development.js and react.production.js files via CDN?
+   ANS:
+       -In development mode, we can enable and utilize React developer tools, devtools profiler, debugging environment attached with source code. We can utilize various functionalities such as Hot Module Replacement, diagnostics so that development environment will help to debug code.
+       -In production mode, compression and minification of Javascript and other resources happens to reduce size of the code which is not the case when it comes to development mode. Performance will be much faster in production mode when compared to development mode.
+       -react.development.js : More developer friendly, readable, will take more size.
+       -react.production.js : Minified code that is not developer friendly as it focused on decreasing in file size, code efficiency.    
+8: .What are async and defer?
+   ANS:
+       -Async allows your script to run as soon as it's loaded, without blocking other elements on the page. 
+       -Defer means your script will only execute after the page has finished loading. 
+         
