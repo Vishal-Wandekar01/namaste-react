@@ -1,0 +1,123 @@
+1: What is NPM?
+   ANS: -It done not have a real full form.
+        -It basically manages packages, One of the biggest package manager.
+        -It is the standard repository of all the packages.
+        -Any package you need to include within your project you can use NPM.
+
+        Examples:
+               a: npm install parcel
+               b: npm install -D parcel (Installing parcel package as  a dev-dependency)
+
+2:  What is ‘Parcel/Webpack’ ? Why do we need it ?
+   ANS: - Parcel/Webpack this are the bundlers.
+        - It create Dev Build for you
+        - creates Local server for you and it host your code to server
+        - HMR - Hot Module Replacement
+        - It uses the file watching algorithm and this algo is written using the CPP
+        - Caching - Faster Builds
+        - It will do a image optimization 
+        - It will do a Minification of file also
+        - It will bundle all the file for US
+        - It compress our file
+        - It uses consistent hashing 
+        - It will do code splitting for you
+        - It will also do differential bundling for you - to support older browsers
+        - It is doing diagnostic in behind the scene 
+        - It gives you good error handling 
+        - It also give a way to host our app on HTTPS
+        - It supports Tree shaking - Remove unused code for you
+        - It has different Dev and Production bundles  
+
+3: What is .parcel-cache ?
+   ANS: -Parcel also uses the cache for faster building.
+        -When you do build for the first time using npx parcel index.html the parcel will create the .parcel-cache folder and used it for faster build, next time when you again build the code, using the cache the build will be faster
+        -It stored the latest result so that it reduces the build time when we run the code later in future.
+
+4: What is ‘npx’ ?
+   ANS: - NPM: used for installing packages and NPX: used for Execution of that packages.
+        - NPX stands for “Node Package Execute”, it is used to execute a package. NPX is a package runner tool that comes with npm (Automatically installed with NPM). It is used to execute packages without the need to install them globally.    
+        Example:
+                npx parcel index.html
+                npx create-react-app swiggyapp
+
+                This command uses npx to run the ‘create-react-app’ without having to install it. It fetches the latest version of ‘create-react-app’ and initializes a new React application named swiggyapp. 
+
+
+5: What is difference between ‘dependencies’ and ‘dev-dependencies’ ?
+   ANS: - dev dependencies are required only during the development time and dependencies are required during the development and also during the production time. 
+
+            Installing the dependencies:
+                Npm install axios
+
+            Installing the dev dependencies:
+                Npm install -D parcel
+
+6: What is Tree shaking?
+  ANS: -Tree shaking means removal of unused or dead code. Parcel supports the feature of tree shaking as it removes the unused or dead code during the code optimization.                 
+       -It is used for as an optimization technique so we can avoid running the code that is not required.
+
+7:  What is Hot Module Replacement ?
+  ANS: -HMR means whenever you make any code changes in your editor the code will be build automatically and it refreshes our React page in the browser and we can see the changes. Parcel supports the HMR by using the “file watch algorithm” which is written in C++.       
+       -user don’t have to refresh the browser every time we make changes. It automatically refresh.
+
+8: List down 5 superpowers of parcel and explain any 3 of them ?
+  ANS:   1) Parcel supports HMR: Whenever you make some code changes parcel automatically build your code and this makes our React page refresh in the browser. For this parcel uses the “file watch algorithm” which is written in C++.
+
+	
+         2) Parcel supports Tree shaking: Tree shaking means it removes the unused or dead code from your project during the code optimization process.
+
+         3) Parcel uses the cache for faster build: Whenever you first time build your project using the parcel, then it will create the folder called .parcel-cache, and during the next build parcel will make use of this cache for building your code much faster. 
+
+         4) Parcel can create different bundles for production and development:  
+
+            	Development build: npx parcel Index.html
+            	Production build: npx parcel build Index.html
+	
+         5) Parcel supports the lazy loading: Lazy loading means loading the resources/ content on the webpage only when needed rather than loading all at once. Lazy loading improves the performance of a webpage. 
+ 
+9: What is .gitignore ? what should we add or not add to it ?
+    ANS: -.gitignore is a file created to insert the files that are not required to be pushed on to github. We can add the files that can be installed when we initially import the code from github like node modules.
+         -In .gitignore we add files that do not need to be pushed to git or production. Mostly we place all the files in the .gitignore that can be regenerated. 
+
+         Example: 
+        1)	Node_modules: It can be generated using the “npm install” and its size is huge, so we put this in .gitignore.
+
+        2)	Dist: Dist folder contains the development or production build and in case of parcel it can be re generated using the build command: npx parcel Index.html (dev build) npx parcel build Index.html.
+
+        3)	.parcel-cache: It can be regenerated using the dev build or production build commands. 
+
+10: What is the difference between package.json and package-lock.json ?        
+   ANS: -package.json maintains the approximate version of the packages whereas 
+        -package-lock.json maintains the exact version of the package. Package-lock.json ensures everyone working on the same project gets the same version of the packages. 
+
+11: Why should I not modify package-lock.json ?
+   ANS: -We should never directly modify the package-lock.json.
+        -The primary purpose of package-lock.json is to ensure consistency of dependency versions across different installations (npm install) (ensure that everyone working on the project uses the same versions of dependencies) , if we manually modify the package-lock.json then there might be some inconsistencies so we should not modify the package-lock.json, just npm will update it whenever it is required. 
+        -The package-lock.json file includes checksums for each downloaded package. Modifying the file might compromise the integrity checks, potentially loading to corrupted or compromised packages. 
+         So, always let npm change it never manually modify it. 
+        
+12: What is Node-modules ? Is it a good idea to push onto github ?
+       ANS: -node_modules is a kind of database where all our packages will present, all the code that we fetch from the npm will be present in the node_modules. For example when we do the “npm install parcel” parcel will be fetched from npm and placed inside in the node_modules folder along with parcel’s all transitive dependencies.  
+
+        -It is not a good idea to push node_modules folder onto the git, because the size of node_modules is very huge and it can be recreated using the “npm install” command.  so to save space in github and production we need to put the node_modules inside the .gitignore file, so that it will not be pushed to  github and production.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
